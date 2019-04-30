@@ -8,9 +8,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 /* General Styles */
 
-*{
-    /* border: 1px solid black; */
-}
+
 html{
     font-size: 125%;
 }
@@ -45,6 +43,7 @@ a{
     text-decoration: none;
     color: white;
 }
+
 h1,h2,h3,h4, .redButton{
     font-family: 'Kanit', sans-serif;
     font-style: italic;
@@ -81,18 +80,20 @@ span{
     float: left;
     margin: 0 17px;
 }
+.headerTop .nav li:last-child{
+    margin-right: 0;
+}
 .headerTop .nav a{
     text-transform: uppercase;
     font-family: 'Catamaran', sans-serif;
     font-weight: 700;
 
 }
-header .fa{
-    /* visibility: hidden; */
+.burger{
     display: none;
     float: left;
     color: white;
-    padding: 5%;
+    padding: 20px 0;
 }
 .headerTop h4{
     color: white;
@@ -142,7 +143,7 @@ main, article{
     background: #fcfbfb;
 }
 main section{
-    padding-bottom: 50px;
+    padding-bottom: 25px;
 }
 main p {
     font-size:1rem;
@@ -170,12 +171,15 @@ main div:last-child {
 }
 
 .news{
-    padding-top: 50px;
+    padding-top: 25px;
 }
 .news img{
     float: left;
     width: calc(25% - 3%) ;
     margin-right: 3%;
+}
+img.mobile{
+    display:none;
 }
 .news div{
     float: left;
@@ -229,7 +233,7 @@ article h2{
 
 /* Aside Styles */
 aside{
-    background: url(../assets/oscarAguilarUnsplash.png);
+    background: url(../assets/asideBackground.png);
     background-position: 50% 50%;
 }
 .icons{
@@ -313,8 +317,7 @@ input[type=email] {
     display: block;
     float: left;
     padding-left:10px;
-    font-size:1rem;
-    
+    font-size:1rem;    
 }
 input::placeholder {
     color: #1f2022;
@@ -349,6 +352,23 @@ input[type=submit] {
 }
 
 /* End of Footer Styles */
+
+/* Hover Styles */
+a:hover{
+    color: grey;
+}
+aside i:hover{
+    color: #e44e48;;
+}
+.redButton:hover{
+    background-color: #e44e48;
+    color: white;
+}
+input[type=submit]:hover{
+    background-color: grey;
+}
+
+/* End of Hover Styles */
 
 @media (max-width: 1500px){
     header{
@@ -450,13 +470,19 @@ input[type=submit] {
     article p{
         margin: 5px 0;
     }
+    aside{
+        background: url(../assets/asideBackgroundMobile.png);
+        background-position: center;
+    }
     .footerTopRightCenter{
         padding-left: 30px;
     }
+    
 }
 
 
 @media (max-width:900px){
+
     .imgContainer {
         width: calc(100% / 2 - 3%);
         margin-right: 6%;
@@ -517,17 +543,37 @@ input[type=submit] {
     .social{
         display: none;
     }
-    header .fa{
+    .burger{
         display: block;
         float: right;
     }
-    .hero h1{
-       margin-top: 0;
+    img.desktop{
+        display:none;
     }
-    
+    img.mobile{
+        display:block;
+    }
+    .hero h1{
+        margin-top: 0;
+    }
+    .article1{
+        background: url(../assets/whiteStripedCarMobile.png);
+        background-repeat: no-repeat;
+        background-size: contain; 
+    }
+    .article2{
+        background: url(../assets/paoloNicolelloUnsplashMobile.png);
+        background-repeat: no-repeat;
+        background-size: contain; 
+    }
+    .article2 h2{
+        margin-top: 65%;
+    }
+    .article1 h2{
+        margin-top: 60%;
+    }
     footer{
         text-align: center;
-        padding:
     }
 
     footer.top{
@@ -559,7 +605,7 @@ input[type=submit] {
 
 @media (max-width:650px){
     header{
-        background-position: 35% 50%;
+        background-image: url(../assets/heroMobile.png);
         height: 100vh;
     }
     .hero{
