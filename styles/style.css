@@ -110,6 +110,7 @@ span{
     font-size: 5.8rem;
     color: #cc1d36;
     margin-bottom: 0;
+    letter-spacing: 1em;;
 }
 
 .hero h3{
@@ -175,15 +176,15 @@ main div:last-child {
 }
 .news img{
     float: left;
-    width: calc(25% - 3%) ;
-    margin-right: 3%;
+    width: 25 ;
 }
 img.mobile{
     display:none;
 }
 .news div{
     float: left;
-    width: 75%;
+    width: calc(75% - 3%);
+    margin-left: 3%;
 }
 .news h2{
     margin: 0;
@@ -199,6 +200,7 @@ article p{
 }
 article h2{
     margin-top: 125px;
+    margin-bottom: 10px;
 }
 
 .article1 {
